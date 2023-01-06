@@ -51,7 +51,7 @@ public interface JeepSalesController {
               required = false, 
               description = "The model name (i.e, 'WRANGLER')"),
           @Parameter(
-              name = "trimLevel", 
+              name = "trim", 
               allowEmptyValue = false, 
               required = false, 
               description = "The trim level(i.e, 'Sport')")
@@ -62,7 +62,7 @@ public interface JeepSalesController {
   @ResponseStatus(code = HttpStatus.OK)
   List<Jeep> fetchJeeps(
       @RequestParam(required = false) String model, 
-      @RequestParam(required = false) String trimLevel);
+      @RequestParam(required = false) String trim);
   
 //@formatter:on
 }
